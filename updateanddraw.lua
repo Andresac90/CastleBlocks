@@ -17,10 +17,10 @@ function _draw()
 	spr(104,23,116)
 	print("X"..block2left,32,117)
 
-	print("⬆️",54,113)
-	print("change block",64,113)
-	print("⬇️",54,120)
-	print("try again",64,120)
+	print("⬆️",54,114)
+	print("change block",64,114)
+	print("⬇️",54,121)
+	print("try again",64,121)
 
 	rect(2,115,21,124)
 	--debug rectangle--
