@@ -6,11 +6,7 @@ function putblocks()
 			block.x=player.x-10
 			block.y=player.y+12
 			buttonplatform=true
-			if block.sp==102 then
-				block1left-=1
-			else
-				block2left-=1
-			end
+			
 
 		else
 			block.x=player.x+10

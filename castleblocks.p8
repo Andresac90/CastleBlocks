@@ -1,8 +1,9 @@
 pico-8 cartridge // http://www.pico-8.com
 version 41
 __lua__
-#include variables.lua
-#include updateanddraw.lua
+#include inits.lua
+#include updates.lua
+#include draws.lua
 #include collisions.lua
 #include playerfunctions.lua
 #include blocks.lua

@@ -1,13 +1,11 @@
-﻿--update and draw--
+﻿--draws--
 
-function _update60()
-	player_update()
-	player_animate()
-	changeblocks()	
-	trampoline_anim()
+function draw_menu()
+	cls()
+	print("press ❎ to start", 30, 60)
 end
 
-function _draw()
+function draw_game()
 	cls()
 	map(0,0)
 	spr(player.sp,player.x,player.y,1,1,player.flpx)
@@ -35,9 +33,25 @@ function _draw()
 	print("dy= "..player.dy,player.x-45,player.y-16)
 
 	putblocks()
-		if buttonplatform then
+	if buttonplatform and mget(block.x/8,block.y/8) == 0 then
+
+		if block.sp==102 and block1left>0 then
 			mset(block.x/8,block.y/8,block.sp)
-		end			
-	print(stat(1),100,88)	
+			buttonplatform = false
+		end
+		if block.sp==104 and block2left>0 then
+			mset(block.x/8,block.y/8,block.sp)
+			buttonplatform = false
+		else
+			buttonplatform = false
+		end
+		
+		if block.sp==102 and block1left>0 then
+			block1left-=1
+		elseif block.sp==104 and block2left>0 then
+			block2left-=1
+		end
+	end		
+	
+	print(stat(1),100,88)
 end
--->8

@@ -1,6 +1,16 @@
---variables--
+--inits--
 
 function _init()
+	init_menu()
+end
+
+function init_menu()
+	_update60 = update_menu
+	_draw = draw_menu
+end
+
+function init_game()
+	
 	player={
 		sp=1,
 		x=0,

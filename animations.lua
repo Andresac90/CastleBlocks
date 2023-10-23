@@ -38,3 +38,4 @@ function trampoline_anim()
 		end
 	end
 end
+-->8
