@@ -10,7 +10,8 @@ function init_menu()
 end
 
 function init_game()
-	
+	_update60 = update_game
+	_draw = draw_game
 	player={
 		sp=1,
 		x=0,
@@ -39,16 +40,18 @@ function init_game()
 	--maps limits--
 	map_start=0
 	map_end=128
-
-	--timed animations--
-	animtrampoline=false
-	animdelay=15
+	map_endy=104
 		
 	--respawn point--
 	respawn_x=0
 	respawn_y=88
 	player.x=respawn_x
 	player.y=respawn_y
+	reset = false
+
+	--timed animations--
+	animtrampoline=false
+	animdelay=15
 		
 	--debug rectangle--
 	x1r=0 y1r=0 x2r=0 y2r=0

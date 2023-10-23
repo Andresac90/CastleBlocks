@@ -137,14 +137,15 @@ function player_update()
 	end
  	
 	--player death & respawn--
-	if player.y>map_end then
+	if player.y>map_endy then
  		player.x=respawn_x
  		player.y=respawn_y
 	end
  	
 	if btnp(⬇️) then
- 		player.x=respawn_x
- 		player.y=respawn_y
+		reset = true
+ 		--player.x=respawn_x
+ 		--player.y=respawn_y
 	end
  	
 end

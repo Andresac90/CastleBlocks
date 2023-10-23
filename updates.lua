@@ -2,8 +2,6 @@
 
 function update_menu()
 	if btnp(❎) then
-		_update60 = update_game
-		_draw = draw_game
 		init_game()
 	end
 end
