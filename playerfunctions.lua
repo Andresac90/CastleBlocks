@@ -15,6 +15,9 @@ function player_update()
 		player.dy=-2.4
 		player.landed=false
 		animtrampoline=true
+	elseif collide_map(player,"down",6) or collide_map(player,"up",6) then	
+		--key=flag 6--	
+		--key logic--
 	else
 		--default--		
 		friction=0.8
@@ -148,6 +151,7 @@ function player_update()
 
 	--next level--
 	if collide_map(player,"down",5) or collide_map(player,"up",5) then
+		--door=flag 5--	
 		checkerlevel=true
 		if checkerlevel then
 			level+=1
