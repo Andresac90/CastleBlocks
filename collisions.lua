@@ -27,6 +27,9 @@ function collide_map(obj,dir,flag)
 		x2=x+w-3	y2=y+h
 	end
 
+	x1 += adder
+	x2 += adder
+
 	--debug rectamgle--
 	x1r=x1		y1r=y1
 	x2r=x2		y2r=y2

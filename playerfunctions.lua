@@ -144,9 +144,17 @@ function player_update()
  	
 	if btnp(⬇️) then
 		reset = true
- 		--player.x=respawn_x
- 		--player.y=respawn_y
 	end
+
+	--next level--
+	if collide_map(player,"down",5) or collide_map(player,"up",5) then
+		checkerlevel=true
+		if checkerlevel then
+			level+=1
+			reset=true
+			checkerlevel=false
+		end
+	end	
  	
 end
 

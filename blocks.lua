@@ -3,13 +3,12 @@
 function putblocks()
 	if btnp(❎) and not player.landed then
 		if player.flpx then
-			block.x=player.x-10
+			block.x=player.x-10+adder
 			block.y=player.y+12
 			buttonplatform=true
 			
-
 		else
-			block.x=player.x+10
+			block.x=player.x+10+adder
 			block.y=player.y+12
 			buttonplatform=true
 		end

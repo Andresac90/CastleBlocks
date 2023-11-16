@@ -11,4 +11,5 @@ function update_game()
 	player_animate()
 	changeblocks()	
 	trampoline_anim()
+	levelmanager()
 end

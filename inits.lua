@@ -63,23 +63,39 @@ function init_game()
 		
 	--change platform--
 	changed=false
-		
 	--put platforms--
 	block={
 		sp=102,
 		x=0,
 		y=0,
 		w=8,
-		h=8,
-		anim=0
+		h=8
 	}
+
+	--blocks data table--
+	blocks={
+
+	}
+	blocki=0
+
 	buttonplatform=false
-	platformx=0
-	platformy=0
 
 	--HUD--
-	block1left=2
-	block2left=1
+	block1leftlevel = 2
+	block2leftlevel = 1
+	block1left=block1leftlevel
+	block2left=block2leftlevel
+	blocksleftx1=3
+	blocksleftx2=13
+	blocksleftx3=22
+	blocksleftx4=31
+
+	--level--
+	level=1
+	adder=0
+	
+
+
 end
 
 -->8
