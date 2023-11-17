@@ -94,7 +94,18 @@ function init_game()
 	level=1
 	adder=0
 	
-
+	--keys--
+	key={
+		sp=106,
+		x=0,
+		y=0,
+		w=8,
+		h=8,
+		flpx=false,
+		flpy=false
+	}
+	haskey=false
+	keyrequired=false
 
 end
 

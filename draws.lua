@@ -9,7 +9,6 @@ function draw_game()
 	cls()
 	map(0,0)
 	spr(player.sp,player.x+adder,player.y,1,1,player.flpx)
-
 	--HUD--
 	--Blocksleft--
 	spr(102,blocksleftx1+adder,116)
@@ -76,7 +75,17 @@ function draw_game()
 		player.y=respawn_y
 		block1left=block1leftlevel
 		block2left=block2leftlevel
+		haskey=false
 		reset = false	
+	end
+
+	--key on level--
+	if keyrequired then
+		if not haskey then
+			mset(key.x,key.y,key.sp)
+		else
+			mset(key.x,key.y,0)
+		end
 	end
 	
 end
