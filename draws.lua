@@ -93,5 +93,7 @@ function draw_game()
 			mset(key.x,key.y,0)
 		end
 	end
+
+	print(stat(1),adder,88)
 	
 end

@@ -4,26 +4,29 @@ function player_update()
 	--ground physics--
 	if collide_map(player,"down",2) then
 		--sand=flag 2--
-		friction=0.5
-		player.accy=1
+		friction=0.3
+		player.accy=1.3
 	elseif collide_map(player,"down",3) then	
 		--ice=flag 3--	
 		friction=0.96
 		player.max_dx=1.5
+		player.accy=2.2 
 	elseif collide_map(player,"down",4) then	
 		--trampoline=flag 4--	
 		player.dy=-2.4
 		player.landed=false
 		animtrampoline=true
-	elseif collide_map(player,"down",6) or collide_map(player,"up",6) then	
-		--key=flag 6--	
-		haskey=true
 	else
 		--default--		
 		friction=0.8
 		player.max_dx=1
 		player.accy=2
 	end	
+
+	if collide_map(player,"down",6) or collide_map(player,"up",6) or collide_map(player,"left",6) or collide_map(player,"right",6) then	
+		--key=flag 6--	
+		haskey=true
+	end
 		
 	--physics--
 	player.dy+=gravity/4
@@ -151,9 +154,9 @@ function player_update()
 	--next level--
 	if collide_map(player,"down",5) or collide_map(player,"up",5) then
 		--door=flag 5--	
-		checkerlevel=true
 		if keyrequired then
 			if haskey then
+				checkerlevel=true
 				if checkerlevel then
 					level+=1
 					reset=true
@@ -161,6 +164,7 @@ function player_update()
 				end
 			end
 		else
+			checkerlevel=true
 			if checkerlevel then
 					level+=1
 					reset=true

@@ -45,10 +45,11 @@ function init_game()
 	--maps limits--
 	map_start=0
 	map_end=128
+	map_starty=0
 	map_endy=104
 		
 	--respawn point--
-	respawn_x=0
+	respawn_x=1
 	respawn_y=88
 	player.x=respawn_x
 	player.y=respawn_y
@@ -86,8 +87,8 @@ function init_game()
 	buttonplatform=false
 
 	--HUD--
-	block1leftlevel = 2
-	block2leftlevel = 1
+	block1leftlevel = 0
+	block2leftlevel = 0
 	block1left=block1leftlevel
 	block2left=block2leftlevel
 	blocksleftx1=3
