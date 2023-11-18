@@ -9,6 +9,11 @@ function init_menu()
 	_draw = draw_menu
 end
 
+function init_ending()
+	_update60 = update_ending
+	_draw = draw_ending
+end
+
 function init_game()
 	_update60 = update_game
 	_draw = draw_game

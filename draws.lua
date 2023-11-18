@@ -5,6 +5,12 @@ function draw_menu()
 	print("press ❎ to start", 30, 60)
 end
 
+function draw_ending()
+	cls()
+	print("thank you for playing castleblocks", 0, 30)
+	print("press ❎ to go back to the main menu", 0, 60)
+end
+
 function draw_game()
 	cls()
 	map(0,0)
