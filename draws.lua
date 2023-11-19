@@ -2,13 +2,16 @@
 
 function draw_menu()
 	cls()
-	print("press ❎ to start", 30, 60)
+	print("castle blocks", 35, 30)
+	print("press ❎ to start", 27, 60)
 end
 
 function draw_ending()
 	cls()
-	print("thank you for playing castleblocks", 0, 30)
-	print("press ❎ to go back to the main menu", 0, 60)
+	print("thank you for playing", 20, 30)
+	print("castle blocks", 35, 40)
+	print("press ❎", 45, 60)
+	print("to go to the main menu", 20, 70)
 end
 
 function draw_game()
@@ -93,7 +96,5 @@ function draw_game()
 			mset(key.x,key.y,0)
 		end
 	end
-
-	print(stat(1),adder,88)
 	
 end
