@@ -2,16 +2,18 @@
 
 function draw_menu()
 	cls()
-	print("castle blocks", 35, 30)
-	print("press ❎ to start", 27, 60)
+	map(0,0)
+	camera(0,128)
+	print("press ❎ to start", 30, 220,7)
 end
 
 function draw_ending()
 	cls()
-	print("thank you for playing", 20, 30)
-	print("castle blocks", 35, 40)
-	print("press ❎", 45, 60)
-	print("to go to the main menu", 20, 70)
+	map(0,0)
+	camera(0,128)
+	print("thank you for playing", 25, 210,7)
+	print("press ❎", 45, 220,7)
+	print("to go to the main menu", 25, 230,7)
 end
 
 function draw_game()
@@ -52,27 +54,28 @@ function draw_game()
 
 	--Blocks--
 	putblocks()
-	if buttonplatform and mget(block.x/8,block.y/8) == 0 then
-
-		if block.sp==102 and block1left>0 then
-			blocks[blocki] = block
-			blocki += 1
-			mset(block.x/8,block.y/8,block.sp)
-			buttonplatform = false
-		end
-		if block.sp==104 and block2left>0 then
-			blocks[blocki] = block
-			blocki += 1
-			mset(block.x/8,block.y/8,block.sp)
-			buttonplatform = false
-		else
-			buttonplatform = false
-		end
+	if buttonplatform then
+		if fget(mget(block.x/8,block.y/8),7) or mget(block.x/8,block.y/8) == 0 then
+			if block.sp==102 and block1left>0 then
+				blocks[blocki] = block
+				blocki += 1
+				mset(block.x/8,block.y/8,block.sp)
+				buttonplatform = false
+			end
+			if block.sp==104 and block2left>0 then
+				blocks[blocki] = block
+				blocki += 1
+				mset(block.x/8,block.y/8,block.sp)
+				buttonplatform = false
+			else
+				buttonplatform = false
+			end
 		
-		if block.sp==102 and block1left>0 then
-			block1left -= 1
-		elseif block.sp==104 and block2left>0 then
-			block2left -= 1
+			if block.sp==102 and block1left>0 then
+				block1left -= 1
+			elseif block.sp==104 and block2left>0 then
+				block2left -= 1
+			end
 		end
 	end		
 	
@@ -93,7 +96,7 @@ function draw_game()
 		if not haskey then
 			mset(key.x,key.y,key.sp)
 		else
-			mset(key.x,key.y,0)
+			mset(key.x,key.y,74)
 		end
 	end
 	

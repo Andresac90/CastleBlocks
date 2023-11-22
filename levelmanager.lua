@@ -47,7 +47,7 @@ function levelmanager()
 		block1leftlevel = 1 
 		block2leftlevel = 1
 		keyrequired=true
-		key.x = 111
+		key.x = 110
 		key.y = 11
 		camera(adder,0)
 	elseif level == 8 then
