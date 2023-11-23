@@ -1,4 +1,4 @@
-﻿--updates--
+--updates--
 
 function update_menu()
 	if btnp(❎) then
@@ -18,4 +18,7 @@ function update_game()
 	changeblocks()	
 	trampoline_anim()
 	levelmanager()
+    if not stat(57) then
+        music(0)
+    end
 end

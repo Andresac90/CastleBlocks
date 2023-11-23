@@ -1,4 +1,4 @@
-﻿--block system--
+--block system--
 
 function putblocks()
 	if btnp(❎) and not player.landed then
@@ -19,10 +19,11 @@ function changeblocks()
 	if btnp(⬆️) and not changed then
 		block.sp=104
 		changed=true
-		
+        sfx(2)
 	elseif btnp(⬆️) and changed then
 		block.sp=102
 		changed=false
+        sfx(2)
 	end
 end
 -->8

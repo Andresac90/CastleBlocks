@@ -1,4 +1,4 @@
-﻿--player functions--
+--player functions--
 
 function player_update()
 	--ground physics--
@@ -16,6 +16,7 @@ function player_update()
 		player.dy=-2.4
 		player.landed=false
 		animtrampoline=true
+        sfx(6)
 	else
 		--default--		
 		friction=0.8
@@ -26,6 +27,7 @@ function player_update()
 	if collide_map(player,"down",6) or collide_map(player,"up",6) or collide_map(player,"left",6) or collide_map(player,"right",6) then	
 		--key=flag 6--	
 		haskey=true
+        sfx(4)
 	end
 		
 	--physics--
@@ -55,6 +57,7 @@ function player_update()
 	and player.landed then
 		player.dy-=player.accy
 		player.landed=false
+        sfx(0)
 	end
 	
 	--check collision up and down--
@@ -145,6 +148,7 @@ function player_update()
 	--player death & respawn--
 	if player.y>map_endy then
  		reset = true
+        sfx(1)
 	end
  	
 	if btnp(⬇️) then
@@ -161,6 +165,7 @@ function player_update()
 					level+=1
 					reset=true
 					checkerlevel=false
+                    sfx(5)
 				end
 			end
 		else
@@ -169,6 +174,7 @@ function player_update()
 					level+=1
 					reset=true
 					checkerlevel=false
+                    sfx(5)
 			end
 		end
 		

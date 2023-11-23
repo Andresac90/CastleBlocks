@@ -1,4 +1,4 @@
-﻿--draws--
+--draws--
 
 function draw_menu()
 	cls()
@@ -61,12 +61,14 @@ function draw_game()
 				blocki += 1
 				mset(block.x/8,block.y/8,block.sp)
 				buttonplatform = false
+                sfx(3)
 			end
 			if block.sp==104 and block2left>0 then
 				blocks[blocki] = block
 				blocki += 1
 				mset(block.x/8,block.y/8,block.sp)
 				buttonplatform = false
+                sfx(3)
 			else
 				buttonplatform = false
 			end
